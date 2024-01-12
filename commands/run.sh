@@ -507,6 +507,7 @@ elif [[ ${#command[@]} -gt 0 ]] ; then
 fi
 
 echo "--- :docker: Running command in ${image}"
+echo BUILDKITE_CANCEL_GRACE_PERIOD = $BUILDKITE_CANCEL_GRACE_PERIOD
 echo -ne '\033[90m$\033[0m docker run ' >&2
 
 # Print all the arguments, with a space after, properly shell quoted
